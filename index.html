@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Js - Graphics</title>
+</head>
+<body>
+
+    <canvas class="line-chart"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+        var ctx = document.getElementsByClassName("line-chart");
+        var charGraph = new Chart(ctx, {
+            type:  'line',
+            data: {
+                labels: ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
+                datasets: [
+                    {
+                    label: "Exchange - 2017",
+                    data: [5,10,5,14,10,15,7,14,8,12,15,10],
+                    borderWidth: 6,
+                    borderColor: 'rgba(77,166,253,0.85)',
+                    backgroundColor: 'transparent',
+                },
+                {
+                    label: "Exchange - 2018",
+                    data: [8,14,9,16,7,19,10,17,6,10,20,15],
+                    borderWidth: 6,
+                    borderColor: 'rgba(6,204,6,0.85)',
+                    backgroundColor: 'transparent',
+                },
+            ]
+                          
+        },
+        options: {
+            title: {
+                dispaly: true,
+                fontSize: 20,
+                text: "Exchange year"
+            },
+            labels: {
+                fontStyle: "bold",
+            }
+        }
+        
+        });
+    </script>
+</body>
+</html>
